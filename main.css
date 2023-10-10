@@ -1,0 +1,112 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box
+}
+
+.container{ /* webpage*/
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(140deg, #30D5C8 , #b042ff);
+    padding: 15px;
+}
+
+.todo-app{    /* the box of the list*/
+    width: 100%;
+    max-width: 650px;
+    background: whitesmoke;
+    margin: 100px;
+    padding: 40px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.todo-app h2{   /* to do List text*/
+    color: darkmagenta;
+}
+
+.row{ /* whats the plan for today whole box area*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: whitesmoke;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{   /* whats the plan for today area not including enter and the other side */
+    flex: 1;
+    border: none;
+    outline: none;
+    background: white;
+    padding: 20px;
+}
+
+button { /* submit button*/
+    border: none;
+    outline: none;
+    padding: 15px 55px;
+    background: salmon;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 40px;
+
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+    background: #ddd;
+  }
+
+ul LI{ /* once you text enter text and enter*/
+    list-style: none;
+    font-size: 20px;
+    padding: 15px 10px 10px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{ /*the _ to let you know whether the task is done yet or not  */
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-image: url(https://www.freepnglogos.com/uploads/line-png/long-lines-straight-line-transparent-7.png);
+    background-size: cover;
+    background-position: center;
+    top: 15px;
+    left: 10px;
+}
+
+ul li.checked{      /* putting a line through your text once its been selected*/
+    color: grey;
+    text-decoration: line-through;
+
+}
+ul li.checked::before{  /* check mark that replaces the _ to make sure you did your activity*/
+    background-image: url(https://banner2.cleanpng.com/20180603/opa/kisspng-check-mark-symbol-clip-art-black-check-mark-5b13a571b1fa40.744854271528014193729.jpg);
+}
+
+ul li span{ /* the X to eliminate the thing you put in */
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    color: black;
+    line-height: 50px;
+    text-align: center;
+}
+hr { /* purple line to fit the theme*/
+    height:5px;
+    border-width:0;
+    background-color: blueviolet;
+  }
+
